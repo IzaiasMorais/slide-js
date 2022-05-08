@@ -53,3 +53,22 @@ img {
     font-family: 'Fira Code';
     background-color: #ffe560;
 }
+
+[data-control='slide'] {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+[data-control='slide'] a {
+  width: 30px;
+  display: block;
+  height: 30px;
+  background: #fb5;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 5px;
+  text-indent: -999px;
+}
+[data-control='slide'] li.active a, [data-control='slide'] li a:hover {
+  background: #e54;
+}
