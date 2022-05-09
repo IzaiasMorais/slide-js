@@ -117,14 +117,10 @@ export class Slide {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
-    
     this.onResize = debounce(this.onResize.bind(this), 200)
-
     this.activeNextSlide = this.activeNextSlide.bind(this);
     this.activePrevSlide = this.activePrevSlide.bind(this);
-
     this.eventControl = this.eventControl.bind(this);
-
     this.activeControlItem = this.activeControlItem.bind(this);
   }
   init() {
@@ -169,10 +165,11 @@ export class SlideNav extends Slide {
     this.controlArray.forEach(item => item.classList.remove(this.activeClass))
     this.controlArray[this.index.active].classList.add(this.activeClass)
   }
-  addControl() {
-    this.control = this.createControl();
+  addControl(customControl) {
+    this.control = document.querySelector(customControl);
     this.controlArray = [...this.control.children];
-    this.controlArray.forEach(this.eventControl);
+
     this.activeControlItem();
+    this.controlArray.forEach(this.eventControl);
   } 
 }
