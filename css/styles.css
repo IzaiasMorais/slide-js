@@ -53,7 +53,6 @@ img {
     font-family: 'Fira Code';
     background-color: #ffe560;
 }
-
 [data-control='slide'] {
   display: flex;
   margin-top: 20px;
@@ -71,4 +70,25 @@ img {
 }
 [data-control='slide'] li.active a, [data-control='slide'] li a:hover {
   background: #e54;
+}
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.custom-controls li {
+  opacity: .8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scale(.8);
+  margin: 4px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
+  transition: .3s;
+}
+.custom-controls li.active {
+  opacity: 1;
+  transform: scale(1);
 }
