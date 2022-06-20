@@ -1,5 +1,5 @@
 <h1 align='center'>
-   🖼 Slide Project
+   🖼 Slide JS
 </h1>
 
 <p align='center'>
